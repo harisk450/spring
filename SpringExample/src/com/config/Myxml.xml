@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+	<beans>
+		<bean id = "emp" class = "com.wst.bean.Employee"  autowire="autodetect" >
+		<property name = "empNo" value="200"></property>
+		<property name = "empName" value="Malik"></property>
+		<property name = "empSal" value="200000"></property>
+		<property name = "empDep" value="HR"></property>
+		<property name = "empHireDate" value="20/2/2019"></property>
+		</bean>
+	
+		<bean id = "empAdd" class = "com.wst.bean.EmployeeAddress">
+		<property name = "addId" value="200"></property>
+		<property name = "addLine1" value="C-142 Indra Vihar"></property>
+		<property name = "addLine2" value="Airport Road Bhopal"></property>
+		<property name = "landmark" value="Bhopal girls school"></property>
+		<property name = "city" value="Bhopal"></property>
+		<property name = "state" value="M.P."></property>
+		<property name = "country" value="India"></property>
+		<property name = "zipCode" value="462030"></property>
+		</bean>
+		
+		<bean id = "stdCon" class = "com.wst.bean.StudentContact">
+		<property name = "contactId" value="212"></property>
+		<property name = "phoneNo" value="0755-25422344"></property>
+		<property name = "emailId" value="harisk450@gmail.com"></property>
+		<property name = "whatsapp" value="+91-7440946920"></property>
+		</bean>
+		
+		<bean id = "empCon" class = "com.wst.bean.EmployeeContact">
+		<property name = "contactId" value="212"></property>
+		<property name = "phoneNo" value="0755-25422344"></property>
+		<property name = "mobileNo" value="+91-7440946920"></property>
+		<property name = "emailId" value="harisk450gmail.com"></property>
+		<property name = "empAdd" ref="empAdd"></property>
+		</bean>
+		
+		<bean id = "stdAdd" class = "com.wst.bean.StudentAddress">
+		<property name = "addId" value="212"></property>
+		<property name = "addLine1" value="Ward No 15 "></property>
+		<property name = "addLine2" value="Muzaffar Ali gali"></property>
+		<property name = "landmark" value="Dilli Darwaza"></property>
+		<property name = "city" value="Sironj"></property>
+		<property name = "state" value="M.P."></property>
+		<property name = "country" value="India"></property>
+		<property name = "zipCode" value="462030"></property>
+		<property name = "stdCon" ref="stdCon"></property>
+		</bean>
+		
+		<bean id = "std" class = "com.wst.bean.Student">
+		<property name = "stdNo" value="212"></property>
+		<property name = "stdName" value="Ramesh"></property>
+		<property name = "stdFees" value="46920"></property>
+		<property name = "stdAdd" ref="stdAdd"></property>
+		</bean>
+		
+	</beans>
+

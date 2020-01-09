@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+	<beans>
+		<bean id = "emp" class = "com.wst.bean.Employee">
+		
+		<constructor-arg value="200" type = "int"></constructor-arg>
+		<constructor-arg  value="Malik" type = "String" ></constructor-arg>
+		<constructor-arg  value="200000" type = "double"></constructor-arg>
+		<constructor-arg  value="HR" type = "String"></constructor-arg>
+		<constructor-arg  value="20/2/2019" type = "String"></constructor-arg>
+		</bean>
+		
+		<bean id = "emp1" class = "com.wst.bean.Employee">
+		
+		<constructor-arg value="200" type = "int"></constructor-arg>
+		<constructor-arg  value="Malik" type = "String" ></constructor-arg>
+		<constructor-arg  value="200000" type = "double"></constructor-arg>
+		<constructor-arg  value="HR" type = "String"></constructor-arg>
+		<constructor-arg  value="20/2/2019" type = "String"></constructor-arg>
+		</bean>
+	
+		<bean id = "empAdd" class = "com.wst.bean.EmployeeAddress">
+		<constructor-arg  value="200" type = "int"  ></constructor-arg>
+		<constructor-arg  value="C-142 Indra Vihar" type = "String" ></constructor-arg>
+		<constructor-arg  value="Airport Road Bhopal" type = "String" ></constructor-arg>
+		<constructor-arg  value="Bhopal girls school" type = "String" ></constructor-arg>
+		<constructor-arg  value="Bhopal" type = "String" ></constructor-arg>
+		<constructor-arg  value="M.P." type = "String" ></constructor-arg>
+		<constructor-arg  value="India" type = "String" ></constructor-arg>
+		<constructor-arg  value="464228" type = "int" ></constructor-arg>
+		
+		</bean>
+		
+		<bean id = "stdCon" class = "com.wst.bean.StudentContact">
+		<constructor-arg  value="212" type = "int" ></constructor-arg>
+		<constructor-arg  value="0755-25422344" type = "String" ></constructor-arg>
+		<constructor-arg  value="harisk450@gmail.com" type = "String" ></constructor-arg>
+		<constructor-arg  value="+91-7440946920" type = "String" ></constructor-arg>
+		</bean>
+		
+		<bean id = "empCon" class = "com.wst.bean.EmployeeContact">
+		<constructor-arg  value="212" type = "int" ></constructor-arg>
+		<constructor-arg  value="0755-25422344" type = "String" ></constructor-arg>
+		<constructor-arg  value="+91-7440946920" type = "String" ></constructor-arg>
+		<constructor-arg  value="harisk450gmail.com" type = "String" ></constructor-arg>
+		<constructor-arg  ref="empAdd" type = "EmployeeAddress" ></constructor-arg>
+		</bean>
+		
+		<bean id = "stdAdd" class = "com.wst.bean.StudentAddress">
+		<constructor-arg  value="212" type = "int"></constructor-arg>
+		<constructor-arg  value="Ward No 15 " type = "String"></constructor-arg>
+		<constructor-arg  value="Muzaffar Ali gali" type = "String"></constructor-arg>
+		<constructor-arg  value="Dilli Darwaza" type = "String"></constructor-arg>
+		<constructor-arg  value="Sironj" type = "String"></constructor-arg>
+		<constructor-arg  value="M.P." type = "String"></constructor-arg>
+		<constructor-arg  value="India" type = "String"></constructor-arg>
+		<constructor-arg  value="462030" type = "int"></constructor-arg>
+		<constructor-arg  ref="stdCon" type = "StudentContact"></constructor-arg>
+		</bean>
+		
+		<bean id = "std" class = "com.wst.bean.Student">
+		<constructor-arg  value="212" type = "int"></constructor-arg>
+		<constructor-arg  value="Ramesh" type = "String"></constructor-arg>
+		<constructor-arg  value="46920" type = "double"></constructor-arg>
+		<constructor-arg  ref="stdAdd" type = "StudentAddress"></constructor-arg>
+		</bean>
+		
+	</beans>
